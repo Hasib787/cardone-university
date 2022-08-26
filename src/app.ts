@@ -43,6 +43,7 @@ class App {
 	};
 
 	private initializeMiddlewares = (): void => {
+		this.app.use('/assets', express.static('assets'))	
 		this.app.set('view engine', 'ejs')
 
 		this.app.use(express.json());
